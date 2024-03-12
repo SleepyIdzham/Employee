@@ -2,25 +2,26 @@ import java.io.*;
 import java.util.*;
 
 class Employee {
-    private String name;
-    private double baseSalary;
-    private int yearsOfService;
+    String name;
+    double salary;
+    int yearsOfService;
 
-    public Employee(String name, double baseSalary, int yearsOfService) {
+    public Employee(String name, double salary, int yearsOfService) {
         this.name = name;
-        this.baseSalary = baseSalary;
+        this.salary = salary;
         this.yearsOfService = yearsOfService;
     }
 
-    public String getName() {
-        return name;
-    }
-
     public double calculateAnnualSalary() {
-        return baseSalary * (1 + 0.05 * yearsOfService);
+        return salary + (salary * 0.05 * yearsOfService);
     }
 
-    public int getYearsOfService() {
-        return yearsOfService;
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "name='" + name + '\'' +
+                ", salary=" + salary +
+                ", yearsOfService=" + yearsOfService +
+                '}';
     }
 }
