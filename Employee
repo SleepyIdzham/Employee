@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+
+class Employee {
+    private String name;
+    private double baseSalary;
+    private int yearsOfService;
+
+    public Employee(String name, double baseSalary, int yearsOfService) {
+        this.name = name;
+        this.baseSalary = baseSalary;
+        this.yearsOfService = yearsOfService;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double calculateAnnualSalary() {
+        return baseSalary * (1 + 0.05 * yearsOfService);
+    }
+
+    public int getYearsOfService() {
+        return yearsOfService;
+    }
+}
